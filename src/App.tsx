@@ -15,6 +15,12 @@ function App() {
   return (
     <main className="container">
       <h1>CG-Cookie Course Tracker</h1>
+      <table>
+        <tr>
+          <th>My Courses</th>
+          <th>Lesson Details</th>
+        </tr>
+      </table>
     </main>
   );
 }
