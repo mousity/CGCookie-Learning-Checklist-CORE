@@ -1,0 +1,1 @@
+# CGCookie-Learning-Checklist-CORE
