@@ -16,10 +16,10 @@ function App() {
     <main className="container">
       <h1>CG-Cookie Course Tracker</h1>
       <table>
-        <tr>
-          <th>My Courses</th>
-          <th>Lesson Details</th>
-        </tr>
+        <div className="grid-wrapper-main">
+          <div>My Courses</div>
+          <div>Lesson Details</div>
+        </div>
       </table>
     </main>
   );
