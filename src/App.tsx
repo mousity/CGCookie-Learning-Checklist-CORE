@@ -12,8 +12,7 @@ function App() {
   //   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
   //   setGreetMsg(await invoke("greet", { name }));
   // }
-  const [isExpanded, setIsExpanded] = useState(false);
-
+  
   return (
     <main className="container">
       <h1>CG-Cookie Course Tracker</h1>

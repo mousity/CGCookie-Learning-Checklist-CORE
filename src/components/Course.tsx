@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // interface to define the types in the props
 interface CourseProps {
     title: string;
@@ -7,12 +9,17 @@ interface CourseProps {
 // Function to return a single course
 function SingleCourse({title, lessonCount}: CourseProps){
 
+    const [isExpanded, setIsExpanded] = useState(false);
 
     return(
-        <button>
+        <button onClick={() => {
+            setIsExpanded(!isExpanded);
+        }}>
             <h2>{title}</h2>
             <p>{lessonCount} lessons</p>
         </button>
+
+
     );
 }
 
