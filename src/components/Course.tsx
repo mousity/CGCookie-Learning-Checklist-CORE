@@ -8,24 +8,21 @@ interface CourseProps {
 
 interface ListItemProps {
     lessons: string[];
-    isExpanded: boolean;
 }
 
-function ListItems({isExpanded, lessons}: ListItemProps){
-    if (isExpanded) {
-        return(<ul>
-            {lessons.map((item) => (
-                <li key={item}>{item}</li>
-            ))}
-        </ul>)
-    }
+function ListItems({ lessons }: ListItemProps){
+    return(<ul>
+        {lessons.map((item) => (
+            <li key={item}>{item}</li>
+        ))}
+    </ul>)
 }
 
 // Function to return a single course
 function SingleCourse({title, lessonCount}: CourseProps){
 
     const [isExpanded, setIsExpanded] = useState(false);
-    const lessons = ["Lesson 1, Lesson 2, Lesson 3"];
+    const lessons = ["Lesson 1", "Lesson 2","Lesson 3"];
 
     return(
         <div>
@@ -35,6 +32,7 @@ function SingleCourse({title, lessonCount}: CourseProps){
                 <h2>{title}</h2>
                 <p>{lessonCount} lessons</p>
             </button>
+            {isExpanded ? <ListItems lessons={lessons}/> : null}
         </div>
 
     );
